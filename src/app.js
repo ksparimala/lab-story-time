@@ -44,7 +44,11 @@ function doesFriendExist(ageInText, ageInNumber){
     if(isNaN(str2))
     {
         return NaN;
-    }  
+    } 
+     if(!isNaN(str1))
+     {
+         return 'NaN'
+     }
    }
 
 //Progression 4:
@@ -62,7 +66,7 @@ function sweetTooth(totalNoOfSweets,sweetsConsumedByKaren,sweetsConsumedInNMeter
     let str5="No sweets for karen's friend";
     if(str1!='number'||str2!='number'||str3!='number'||str4!='number')
     {
-        return str5;
+        return "No sweets for karen's friend";
     }
    if(totalNoOfSweets==0 && sweetsConsumedByKaren==0 && sweetsConsumedInNMeters==0 && metersToTravel==0 )
     {
@@ -139,7 +143,7 @@ if(choice==-1)
 {
     return "Break down and give up all hope";
 }
-if(str1=='string')
+if(choice=='I give up')
 {
     return "Refused to do anything for karen";
 }
@@ -153,3 +157,20 @@ if(str1=='string')
 //Take all of Lily's strategies and concatenate them to a single var
 //Seperate the strategies by a single space
 //Return the length of the complete strategy
+function consoleKaren(strategies)
+{
+    let str1=" ";
+    for(let i=0;i<strategies.length;i++)
+    {
+        name+=strategies[i]+" ";
+    }
+    concole.log(name.length);
+    return name.length;
+}
+//function consoleKaren(strategies){
+   // let stringConcat = "";
+  //  for(let i=0;i<strategies.length;i++){
+        //stringConcat = stringConcat + strategies[i];
+   // }
+   // return stringConcat.length;
+//}
